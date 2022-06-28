@@ -1,0 +1,1441 @@
+::-webkit-scrollbar-thumb {
+    min-height: 60px;
+    width:0px;
+    background: transparent;
+    }
+ 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    }
+ 
+ ::selection {
+  background-color: #eee;
+  color:#000;
+}
+    
+/* - - - - FONTS - - - - */
+
+@font-face { font-family: "olde"; src: url('https://dl.dropboxusercontent.com/s/2vwkvtmfqarfsls/oldenglish.TTF') ;}
+@font-face { font-family:john; src:url('https://dl.dropbox.com/s/qrzidepa19nkqkb/John%20Bulgarry.ttf?dl=0') }
+
+@font-face { font-family:margenta; src:url('https://dl.dropbox.com/s/4qda7iwdjlh2mvy/margenta-webfont.ttf?dl=0') }
+
+ 
+/* - - - - GENERAL - - - - */
+ 
+body {
+    background: #000000 url('https://static.tumblr.com/w2gv3te/bu3qsrr09/twinkling_pink.gif') repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    font-family: 'quicksand', sans-serif;
+    font-size:9px;
+    line-height:12px;
+    letter-spacing:1px;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;  
+    text-align:left;
+    cursor: url(tinycursor.gif), auto;
+}
+
+
+p { padding-top: 5px;}
+ol, ul { margin-left: 10px; padding: 5px; }
+ul { list-style-type: square; }
+
+ 
+a:link, a:active, a:visited{
+color: #FBF3ED;
+text-decoration:none;
+-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+transition: all 0.5s linear;
+}
+ 
+ 
+a:hover {
+color:#FBF3ED;
+-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+transition: all 0.5s linear;
+ 
+}
+
+small,sup, sub {
+    font-size:9px;
+}
+
+#base {
+    z-index:9999;
+    position:fixed;
+    width:800px;
+    height:680px;
+    padding:0px;
+    margin:auto;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    overflow:auto;
+    position:absolute;
+}  
+
+/* - - - - TITLE - - - - */
+
+.title {
+    background:transparent;
+    letter-spacing:-5px;
+    padding-top:0px;
+    position:absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.maintitle {
+    
+    font-size: 135px;
+    color:#F2AEDB;
+    font-family: john;
+    line-height: 130px;
+    letter-spacing:1px;
+    text-shadow:0px 0px 3px #F2AEDB;
+    text-align:center;
+  } 
+
+.maintitle span {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 20px #F2AEDB;
+    }
+    to {
+      text-shadow: 0 0 30px #F2AEDB, 0 0 10px #F2AEDB;
+    }
+  }
+
+.maintitle b {
+    font-size: 60px;
+    color: #ffffff;
+    font-style:bold;
+    text-transform: uppercase;
+    font-family: 'Noto Serif Display', serif;
+    text-shadow:0px 0px 3px #ffffff;  
+}
+
+.subtitle { 
+    background:rgba(126,221,203, .9);
+    padding:5px 7px 5px 7px;
+    font-size:17px;
+    font-weight:normal;
+    font-style:italic;
+    font-family: 'Noto Serif Display', serif;
+    text-transform:uppercase;
+    color:#ffffff;
+    margin:0 auto;
+    margin-top:50px;
+    width:250px;
+    text-align:center;
+    letter-spacing:1px;}
+    
+.titleicon {
+    font-size:20px;
+    color:#ffffff;
+    text-align:center;
+    margin-top: 20px;
+    animation: float 0.8s ease-in-out infinite;
+}
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(126,221,203, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(126,221,203, 0);
+  }
+}
+
+.animate {
+  animation: shadow-pulse 1.1s infinite;
+}
+
+
+@keyframes float {                                     
+    0% {                                     
+     transform: translatey(0px);                                     
+    }                                     
+    50% {                                     
+     transform: translatey(-3px);                                     
+    }                                     
+    100% {                                     
+     transform: translatey(0px);                                     
+    }                                     
+   }                                      
+        
+
+/* - - - - POSTS - - - - */
+
+#content {
+    position:relative;
+    margin:0 auto;
+    height:630px;
+    width:740px;
+    overflow:hidden;
+    z-index:9999;
+    box-sizing:border-box;
+    border-radius:0px 0px 4px 0px;
+    background:transparent;
+    margin-top:660px;
+    margin-bottom:80px;
+    border-radius:15px;
+}
+
+
+/* ★·.·´¯`·.·★ phone elements ★·.·´¯`·.·★ */
+ 
+
+
+ 
+#container {
+    position:absolute;
+    height:590px;
+    width:300px;
+    margin: auto;
+    left: 0;
+    border-radius:30px;
+    bottom: 0;
+    overflow:hidden;
+    right: 0;
+    text-align:left;
+    background: #000;  /* phone border color */
+    box-shadow:0px 0px 9px #F2AEDB;  /* phone shadow */
+    margin-bottom: 5px;
+ 
+}
+
+.screen {
+    width:280px;
+    position:absolute;
+    left:10px;
+    height:560px;
+    background-image:url('stars.gif');
+    filter: brightness(0.9);
+    border-radius:20px;
+    background-color:#fff; /* screen color */
+    top:10px;
+}
+
+.top {
+    
+    height:30px;
+    position:absolute;
+    top:-10px;
+    background-color:#000;
+    z-index:999;
+    left:80px;
+    width:120px;
+    border-radius:10px;
+    
+}
+
+.c {
+    position:absolute;
+    right:30px;
+    top:15px;
+    background-color:#fff;
+    height:5px;
+    width:5px;
+    border-radius:100%;
+}
+
+.s {
+    width:45px;
+    height:5px;
+    left:30px;
+    top:15px;
+    background-color:#fff;
+    position:absolute;
+    border-radius:5px;
+}
+
+
+.dock {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    width:260px;
+    height:60px;
+    border-radius:20px;
+    background-color:rgba(255, 255, 255, 0.7);
+    
+}
+
+
+
+.bar {
+    top:7px;
+    width:300px;
+    position:absolute;
+}
+
+.t {
+    left:30px;
+    position:absolute;
+    color:#fff;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.w {
+    right:35px;
+    font-size:10px;
+    position:absolute;
+    letter-spacing:2px;
+}
+
+.w i {
+    color:#fff;
+}
+
+.homescreen {
+    position:absolute;
+    top:0px;
+}
+
+
+.app {
+    width:50px;
+    height:50px;
+    background-image: linear-gradient(to right, #BF8AB1 0%, #8C6481  100%);
+    transition: 2s;
+    font-size: 20px;
+    line-height: 50px;
+    text-align:center;
+    font-weight:800;
+    color:#FBF3ED;
+    border-radius:10px;
+    cursor: url(tinycursor.gif), auto;
+}
+
+.app:hover {
+    background-image: linear-gradient(to left, #BF8AB1 0%, #8C6481  100%);
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+
+
+.cap {
+    width:50px;
+    margin-top:5px;
+    font-weight:bold;
+    text-align:center;
+    position:absolute;
+    color:#ffffff; /* app names */
+}
+
+
+.twit {
+    position:absolute;
+    left:10px;
+    top:50px;
+}
+
+.insta {
+    position:absolute;
+    left:75px;
+    top:50px;
+}
+
+
+.mess {
+    position:absolute;
+    left:10px;
+    top:125px;
+}
+
+.fb {
+    position:absolute;
+    left:75px;
+    top:125px;
+}
+
+    
+    .cap2 {
+        left:145px;
+        width:125px;
+        text-align:center;
+        top:180px;
+        font-weight:bold;
+        position:absolute;
+        color:#fff;
+    }
+
+
+.weather {
+    width:125px;
+    height:125px;
+    top:210px;
+    left:10px;
+    position:absolute;
+    border-radius:10px;
+    background-color: #7EDDCB;
+    color:#fff;
+    cursor: url(tinycursor.gif), auto;
+}
+
+.cap3 {
+        left:10px;
+        width:125px;
+        text-align:center;
+        top:340px;
+        font-weight:bold;
+        position:absolute;
+        color: #fff;
+    }
+
+.weat {
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    text-align:center;
+    width:125px;
+    cursor: url(tinycursor.gif), auto;
+}
+
+.her {
+    font-size:50px;
+    font-weight:bold;
+    bottom:25px;
+    position:absolute;
+    text-align:center;
+    width:125px;
+    cursor: url(tinycursor.gif), auto;
+}
+
+.pin {
+    left:155px;
+    top:210px;
+    position:absolute;
+}
+
+.discord {
+    position:absolute;
+  left:220px;
+  top:210px;
+}
+
+.yt {
+    left:155px;
+    top:285px;
+    position:absolute;
+}
+
+.map {
+    left:220px;
+    top:285px;
+    position:absolute;
+}
+
+.spotify {
+    width:260px;
+    position:absolute;
+    top:365px;
+    background-color:#7EDDCB;
+    left:10px;
+    border-radius:10px;
+    height:85px;
+    cursor: url(tinycursor.gif), auto;
+}
+
+.spotify img {
+    position:absolute;
+    top:10px;
+    left:10px;
+    height:65px;
+    width:65px;
+    border-radius:5px;
+}
+
+.spotify button {
+    padding:5px;
+    background-color:transparent;
+    border:1px solid transparent;
+    font-size:20px;
+    color:#f1f1f1;
+}
+
+
+.spotify buttom:onclick {
+    background-color:transparent;
+    border:1px solid transparent;
+}
+
+.st {
+    position:absolute;
+    width:175px;
+    text-align:left;
+    height:65px;
+    top:10px;
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    left:85px;
+    line-height:50px;
+    cursor: url(tinycursor.gif), auto;
+}
+
+.sa {
+    position:absolute;
+    width:175px;
+    text-align:left;
+    height:65px;
+    top:10px;
+    color:#fff;
+    font-size:12px;
+    left:85px;
+    line-height:80px;
+    cursor: url(tinycursor.gif), auto;
+}
+
+.sp {
+    top:30px;
+    right:10px;
+    position:absolute;
+    letter-spacing:2px;
+}
+
+.cap4 {
+        left:10px;
+        width:260px;
+        text-align:center;
+        top:455px;
+        font-weight:bold;
+        position:absolute;
+        color:#fff;
+    }
+    
+    
+.one {
+    position:absolute;
+    left:10px;
+    top:5px;
+}
+
+.two {
+    position:absolute;
+    left:73px;
+    top:5px;
+}
+
+.three {
+    position:absolute;
+    left:137px;
+    top:5px;
+}
+
+.four {
+    position:absolute;
+    left:200px;
+    top:5px;
+}
+
+
+/* ★·.·´¯`·.·★ tabs ★·.·´¯`·.·★ */ 
+
+
+/* Style the tab content */
+.tabcontent {
+   width:280px;
+    position:absolute;
+    overflow:hidden;
+    left:10px;
+    height:560px;
+    border-radius:20px;
+    background-color:#fff; /* screen color */
+    top:10px;
+    z-index:99;
+    display: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+/* Style the close button */
+.topright {
+  position:absolute;
+  left:20px;
+  font-size:12px;
+  z-index:99;
+  font-weight:bold;
+  top:7px;
+}
+
+
+
+/* ★·.·´¯`·.·★ twitter tab content ★·.·´¯`·.·★ */ 
+
+
+.twit-header {
+    top:0px;
+    position:absolute;
+    left:0px;
+    width:280px;
+    height:110px;
+    z-index:9;
+    background-image:url('starstwi.gif');
+}
+
+.twit-icon {
+    height:80px;
+    width:80px;
+    border:5px solid #eee;
+    border-radius:100%;
+    position:absolute;
+    top:70px;
+    z-index:99;
+    left:10px;
+    background-image:url('https://i.imgur.com/DyfYtCN.png');
+}
+
+.twit-edit {
+    
+    width: 57px;
+    height: 5px;
+    right: 10px;
+    line-height: 3px;
+    font-weight:bold;
+    top:120px;
+    border:1px solid #3b9feb;
+    color:#3b9feb;
+    position:absolute;
+    border-radius:15px;
+    padding:10px;
+}
+
+.twit-edit a {
+    color:#3b9feb;
+}
+
+.twit-edit a:hover {
+    background-color:#ddd;
+    
+}
+
+.twit-display {
+    font-size:15px;
+    left:15px;
+    font-weight:bold;
+    top:170px;
+    position:absolute;
+}
+
+.twit-user {
+    font-size:12px;
+    top:190px;
+    position:absolute;
+    left:15px;
+    color:#aaa;
+}
+
+.twit-desc {
+    position:absolute;
+    top:210px;
+    left:15px;
+    height:30px;
+    width:250px;
+    text-align:justify;
+    
+}
+
+
+.twit-location {
+    color:#bbb;
+    left:15px;
+    top:245px;
+    width:120px;
+    position:absolute;
+}
+
+
+.twit-link {
+     color:#3b9feb;
+    left:130px;
+    top:245px;
+    width:120px;
+    position:absolute;
+}
+
+.twit-link span {
+    color:#bbb;
+    
+}
+
+.twit-join {
+    top:265px;
+    position:absolute;
+    color:#bbb;
+    left:15px;
+}
+
+.twit-following {
+    position:absolute;
+    top:285px;
+    color:#ddd;
+    left:15px;
+    width:120px;
+}
+
+.twit-following b {
+    color:#000;
+}
+
+.twit-followers {
+    position:absolute;
+    top:285px;
+    color:#bbb;
+    left:100px;
+    width:120px;
+}
+
+.twit-followers b {
+    color:#000;
+}
+
+.twit-a {
+    border-bottom:2px solid #3b9feb;
+    color:#3b9feb;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:15px;
+    padding-left:15px;
+    left:0px;
+    position:absolute;
+    font-weight:bold;
+    top:300px;
+    width:30px;
+    height:10px;
+}
+
+.twit-na {
+    width: 205px;
+    right: 0px;
+    height: 10px;
+    top: 321px;
+    padding-right: 15px;
+    border-bottom:1px solid #aaa;
+    position:absolute;
+}
+
+.twit-label {
+    font-weight:bold;
+    position:absolute;
+    margin-right:30px;
+    color:#aaa;
+    left:70px;
+    top:310px;
+}
+
+
+.twit-tweet {
+    height: 230px;
+    position: absolute;
+    left: 0px;
+    top: 335px;
+    width: 280px;
+}
+
+.tweet {
+    padding:10px;
+    height:100px;
+    width:280px;
+    border-bottom:1px solid #aaa;
+}
+
+.tweet-icon {
+    position:absolute;
+    left:10px;
+    height:50px;
+    width:50px;
+    top:10px;
+    background-image:url('https://i.imgur.com/VgPRccI.png');
+    border-radius:100%;
+}
+
+.tweet-display {
+    font-size:10px;
+    font-weight:bold;
+    position:absolute;
+    top:10px;
+    left:70px;
+}
+
+.tweet-display span {
+    font-weight:normal;
+    padding-left:5px;
+}
+
+
+.tweet-content {
+    position:absolute;
+    left:70px;
+    width:195px;
+    text-align:justify;
+    top:25px;
+}
+
+.tweet-quote {
+    padding:5px;
+    width:185px;
+    height:45px;
+    position:absolute;
+    left:70px;
+    top:55px;
+    border-radius:5px;
+    border:1px solid #aaa;
+}
+
+.quote-display {
+     font-size:8px;
+    font-weight:bold;
+    margin-left:5px;
+}
+
+.quote-display span {
+    font-weight:normal;
+    padding-left:5px;
+}
+
+.quote-tweet {
+    margin-top:0px;
+    margin-left:5px;
+    width:175px;
+    text-align:justify;
+}
+
+
+/* ★·.·´¯`·.·★ instagam tab content ★·.·´¯`·.·★ */ 
+
+
+
+.instagram-user {
+    width:280px;
+    top:30px;
+    left:0px;
+    text-align:center;
+    font-weight:bold;
+    position:absolute;
+    font-size:14px;
+    
+}
+
+.il {
+    position:absolute;
+    left:10px;
+    top:30px; font-size:14px;
+    font-weight:bold;
+}
+
+.ir {
+    position:absolute;
+    right:10px;
+    top:30px; font-size:14px;
+    font-weight:bold;
+}
+
+.instagram-icon {
+    border:2px solid #3b9feb ;
+    padding:2px;
+    height:70px;
+    width:70px;
+    border-radius:100px;
+    position:absolute;
+    top:55px;
+    left:10px;
+    
+}
+
+.instagram-icon img {
+    height:70px;
+    width:70px;
+    border-radius:100%;
+}
+
+.instagram-posts {
+    height:30px;
+    width:50px;
+    position:absolute;
+    left:100px;
+    top:80px;
+    text-align:center;
+    
+}
+
+.instagram-posts span {
+    font-weight:bold;
+    font-size:14px;
+}
+
+.instagram-followers {
+    height:30px;
+    width:50px;
+    position:absolute;
+    left:210px;
+    top:80px;
+    text-align:center;
+    
+}
+
+.instagram-followers span {
+    font-weight:bold;
+    font-size:14px;
+}
+
+.instagram-following {
+    height:30px;
+    width:50px;
+    position:absolute;
+    left:150px;
+    top:80px;
+    text-align:center;
+    
+}
+
+.instagram-following span {
+    font-weight:bold;
+    font-size:14px;
+    text-align:center;
+}
+
+.instagram-display { 
+    font-size:11px;
+    position:absolute;
+    left:10px;
+    top:140px;
+    width:260px;
+    text-align:left;
+    font-weight:bold;
+    
+}
+
+.instagram-desc {
+    width:260px;
+    text-align:left;
+    left:10px;
+    position:absolute;
+    top:155px;
+}
+
+.instagram-f {
+    position:absolute;
+    padding:5px;
+    width:100px;
+    height:10px;
+    border:1px solid #aaa;
+    border-radius:5px;
+    line-height:10px;
+    text-align:center;
+    top:190px;
+    left:10px;
+    font-weight:bold;
+}
+
+.instagram-m {
+    position:absolute;
+    padding:5px;
+    width:100px;
+    height:10px;
+    border:1px solid #aaa;
+    border-radius:5px;
+    line-height:10px;
+    text-align:center;
+    top:190px;
+    left:130px;
+    font-weight:bold;
+}
+
+.instagram-d {
+    position:absolute;
+    padding:5px;
+    width:10px;
+    height:10px;
+    border:1px solid #aaa;
+    border-radius:5px;
+    line-height:10px;
+    text-align:center;
+    top:190px;
+    left:250px;
+    font-weight:bold;
+}
+
+
+.instagram-a {
+    width:140px;
+    left:0px;
+    position:absolute;
+    top:210px;
+    height:30px;
+    border-bottom:1px solid #3b9feb;
+    color:#3b9feb;
+}
+
+.instagram-na {
+     width:140px;
+    right:0px;
+    position:absolute;
+    top:225px;
+    height:30px;
+    text-align:center;
+    font-size:13px;
+}
+
+.instagram-na i {
+    
+    color:#ddd;
+    
+}
+
+.ia {
+     width:140px;
+    left:0px;
+    position:absolute;
+    top:225px;
+    height:30px;
+    font-size:13px;
+    color:#3b9feb;
+    text-align:center;
+}
+
+.ia i {
+    color:#3b9feb;
+}
+
+
+.instagram-feed {
+    bottom: 19px;
+    width: 290px;
+    height: 300px;
+    position: absolute;
+    left: -3px;
+}
+
+.instagram-feed img {
+    margin-left: 0px;
+    width: 92px;
+    height: 92px;
+}
+
+.instagram-bottom {
+   bottom: -23px;
+    color: #333;
+    height: 50px;
+    font-size: 15px;
+    width: 280px;
+    left: 0px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-left: 5px;
+    letter-spacing: 15px;
+    position: absolute;
+    text-align: center;
+}
+
+
+
+
+/* ★·.·´¯`·.·★ imessage tab content ★·.·´¯`·.·★ */ 
+
+.imessage-contact {
+    height:100px;
+    width:280px;
+    background-color:rgba(197, 197, 197,0.95);
+    position:absolute;
+    z-index:9;
+    top:0px;
+}
+
+.imessage-icon {
+    width:50px;
+    height:50px;
+    left:115px;
+    top:30px;
+    border-radius:100%;
+    background-image:url('https://i.imgur.com/79Eeh9Y.png');
+    position:absolute;
+}
+
+.imessage-name {
+    width:280px;
+    position:absolute;
+    bottom:5px;
+    color:#000;
+    text-align:center;
+    font-weight:bold;
+    left:0px;
+}
+
+.imessage-notif {
+    padding:5px;
+    height:10px;
+    width:auto;
+    border-radius:10px;
+    font-weight:bold;
+    line-height:10px;
+    position:absolute;
+    background-color:#3b9feb;
+    color:#fff;
+    left: 25px;
+    top: 40px;
+
+}
+
+
+.imessage-b {
+    color:#3b9feb;
+    font-weight:bold;
+    position:absolute;
+    top:40px;
+    left:10px;
+    font-size:15px;
+    
+}
+
+.imessage-content {
+    position:absolute;
+    width:240px;
+    height:510px;
+    top:0px;
+    left:20px;
+}
+
+
+p {
+  max-width: 240px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position:relative;
+	padding:5px 15px;
+  border-radius:25px;
+}
+
+ p:before {
+    content:"";
+		position:absolute;
+    bottom:-2px;
+    height:20px;
+  }
+
+p:after {
+    content:"";
+		position:absolute;
+    bottom:-2px;
+    height:20px;
+}
+
+.imessage-send {
+	color:#fff; 
+	background:#3b9feb;
+	align-self: flex-end;
+}
+		
+	.imessage-send:before {
+		right:-7px;
+		border-right:20px solid #3b9feb;
+		border-bottom-left-radius: 16px 14px;
+		transform:translate(0, -2px);
+	}
+
+	.imessage-send:after {
+		right:-56px;
+		width:26px;
+		background:#fff;
+		border-bottom-left-radius: 10px;
+		transform:translate(-30px, -2px);
+	}
+	
+	
+.imessage-receive {
+	background:#eee;
+	color:#000;
+}
+		
+	.imessage-receive:before {
+		left:-7px;
+		border-left:20px solid #eee;
+		border-bottom-right-radius: 16px 14px;
+		transform:translate(0, -2px);
+	}
+
+	.imessage-receive:after {
+		left:4px;
+		width:26px;
+		background:#fff;
+		border-bottom-right-radius: 10px;
+		transform:translate(-30px, -2px);
+	}
+	
+	
+.imessage-date {
+    width:240px;
+    text-align:center;
+    position:absolute;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+.imessage-type {
+    width:280px;
+    bottom:10px;
+    height:50px;
+    border-top:1px solid #aaa;
+    position:absolute;
+    left:0px;
+}
+
+.imessage-icons {
+    position:absolute;
+    top:10px;
+    letter-spacing:3px;
+    color:#aaa;
+    font-size:20px;
+    left:10px;
+}
+
+.imessage-edit {
+    width:185px;
+    position:absolute;
+    top:10px;
+    right:10px;
+    padding:5px;
+    border:1px solid #aaa;
+    height:10px;
+    border-radius:10px;
+}
+
+
+
+
+
+/* ★·.·´¯`·.·★ facebook tab content ★·.·´¯`·.·★ */ 
+
+
+.facebook-header {
+    width:280px;
+    height:200px;
+    position:absolute;
+    top:-10px;
+    z-index:-9;
+    left:0px;
+    background-image:url('starsfb1.gif');
+    
+}
+
+.facebook-icon {
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:140px;
+    left:80px;
+    border:5px solid #fff;
+    z-index:99;
+    border-radius:100%;
+    background-image:url('https://i.imgur.com/l1y0KwD.png');
+    
+}
+
+.facebook-display {
+    top:255px;
+    width:280px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    position:absolute;
+}
+
+.facebook-desc {
+    font-size:12px;
+    position:absolute;
+    top:275px;
+    width:280px;
+    text-align:center;
+}
+
+.facebook-button {
+    position:absolute;
+    top:300px;
+    width:230px;
+    left:20px;
+    color:#fff;
+    text-align:center;
+    font-weight:bold;
+    background-color:#3b9feb;
+    height:10px;
+    padding:5px;
+    border-radius:5px;
+}
+
+.facebook-info {
+    top:330px;
+    width:240px;
+    line-height:20px;
+    left:20px;
+    color:#444;
+    position:absolute;
+}
+
+.facebook-info span {
+    font-weight:bold;
+    color:#3b9feb;
+}
+
+
+.facebook-title {
+    font-size:12px;
+    font-weight:bold;
+    width:280px;
+    text-align:center;
+    position:absolute;
+    top:440px;
+    left:0px;
+}
+
+.facebook-story {
+    width:260px;
+    height:80px;
+    position:absolute;
+    left:20px;
+    top:460px;
+}
+
+
+.facebook-story img {
+    height:80px;
+    width:50px;
+    margin-right:10px;
+    border-radius:5px;
+}
+
+.icons-phone {
+    margin-top:15px;
+}
+
+
+.photo {
+    position:absolute;
+       top:50px;
+       left:145px;
+       border-radius:10px;
+       width:125px;
+       height:125px;
+       z-index:99999999999999999999;
+       background-image:url('https://i.imgur.com/Q8o5j3Z.png');
+       opacity:1;
+       cursor: url(tinycursor.gif), auto;
+       }
+
+
+.photo img {
+    top:50px;
+    left:145px;
+    border-radius:10px;
+    opacity:1;
+    width:125px;
+    height:125px;
+    animation-timing-function: linear;
+    animation-name: easein;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    -webkit-animation-name: easein;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+}
+
+@-webkit-keyframes easein {
+    0% {opacity: 0;}
+    15% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes easein {
+    0% {opacity: 0;}
+    15% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+
+#s1 {
+    top:0px;
+    left:0px;
+    position:absolute;
+    opacity:1;
+}
+
+
+#s2 {
+    -webkit-animation-delay: -8s;
+    top:0px;
+    left:0px;
+    position:absolute;
+    opacity:1;
+}
+
+
+#s3 {
+    -webkit-animation-delay: -4s;
+    top:0px;
+    left:0px;
+    position:absolute;
+    opacity:1;
+}
+
+
+#player-container  #play-pause {
+    cursor: pointer;
+    display: inline-block;
+    bottom: 11px;
+    left: -182px;
+    text-indent: -999999px;
+    z-index: 2;
+    background-image: url(play.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    text-align: center;
+    animation: pulse 2s infinite;
+    }
+    
+  .play {
+    background-image: url(play.svg);
+      }
+  .pause {
+    background-image: url(pause.svg)!important;
+      }
